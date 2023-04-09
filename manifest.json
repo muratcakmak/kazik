@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Kazik Detector",
+  "version": "1.0",
+  "description": "Detects kazik product photos on a webpage.",
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.trendyol.com/*",
+        "*://*.hepsiburada.com/*",
+        "*://*.n11.com/*",
+        "*://*.sahibinden.com/*",
+        "*://*.tekzen.com.tr/*",
+        "*://*.amazon.com.tr/*",
+        "*://*.a101.com.tr/*"
+
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
